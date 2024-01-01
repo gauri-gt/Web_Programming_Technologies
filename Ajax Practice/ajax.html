@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script>
+        var xhr;
+        function fun()
+        {
+            xhr = new XMLHttpRequest();
+            if(xhr)
+            {
+               
+                xhr.onload = function(){
+                if(xhr.status == 200 && xhr.readyState == 4)
+                {
+                    document.getElementById("mySpan").innerHTML=this.responseText;
+                }
+            };
+                xhr.open("GET", "Data.txt", true);
+                xhr.send();
+            
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h3>Click the button to fetch the data</h3>
+        <input type="button" id="btn" name="btn" value="Click here" onclick="fun()" />
+        </form>
+
+        <span id="mySpan"></span>
+
+</body>
+</html>
