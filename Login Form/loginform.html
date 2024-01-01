@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #err,
+        #err2 {
+            color: red;
+        }
+    </style>
+    <script src="validate.js">    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateForm()">
+        <h3> Welcome!!!!</h3>
+        <table>
+            <tr>
+                <td>
+                    Username :
+                </td>
+                <td>
+                    <input type="text" id="uname" name="uname" required>
+                </td>
+                <td>
+                    <span id="err"></span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td>
+                    Password :
+                </td>
+                <td>
+                    <input type="password" id="pswrd" name="pswrd" required>
+                </td>
+                <td>
+                    <span id="err2"></span>
+                </td>
+
+            </tr>
+        </table>
+        <input type="button" value="Submit" ><br />
+
+
+    </form>
+    <br>
+    Hello <span id="name"></span><br>
+
+    Your Password is : <span id="validpswrd"></span>
+
+
+</body>
+
+</html>
